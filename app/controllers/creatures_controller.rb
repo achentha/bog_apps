@@ -17,6 +17,16 @@ class CreaturesController < ApplicationController
 
   end
 
+  def edit
+    @creature = Creature.find_by_id(params[:id])
+  end
+
+  def update
+    creature = Creature.find_by_id(params[:id])
+    creature.update_attributes(creature_params)
+    redirect_to creature_path(creature)
+  end
+
   private
 
   def creature_params
