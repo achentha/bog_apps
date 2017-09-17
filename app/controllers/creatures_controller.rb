@@ -4,12 +4,16 @@ class CreaturesController < ApplicationController
     @creatures = Creature.all
   end
 
+  def show
+    @creature = Creature.find_by_id(params[:id])
+  end
+
   def new
   end
 
   def create
     creature = Creature.create(creature_params)
-    redirect_to creatures_path
+    redirect_to creature_path(creature)
 
   end
 
