@@ -1,3 +1,4 @@
 <h1>One Amazing Creature</h1>
 <p><strong>Name: </strong> <%= @creature.name %></p>
 <p><strong>Description: </strong> <%= @creature.description %></p>
+<%= button_to "Delete", @creature, method: :delete %>
