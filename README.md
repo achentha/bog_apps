@@ -10,5 +10,9 @@ Welcome to the 'My Bog App'. You can use it to create and maintain your favorite
 * Ruby on Rails
 * Active Records for PostgreSQL DB
 
+## The personal experience on this project:
+* The required CRUD functionality took me about 5 hours on the first run and 66 minutes on my last run(5th). I invested a LOT of times trying to understand as much details as I can on the first run. I think I got most of the concept.
+* After that I spent many hours styling up the page, adding the edit button, the "back to the front page" button. And had some fun seeding up a few creatures.
+
 ## History
 09/17/2017 - initial creation
