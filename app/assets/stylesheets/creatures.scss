@@ -1,3 +1,79 @@
-// Place all the styles related to the creatures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: cursive;
+  // border: 1px solid black;
+}
+
+body {
+  // background-color: #eed;
+  background-color: #330;
+
+  // background-image: url("../../assets/images/background.jpg");
+}
+
+.panel {
+  border-width: thick;
+  border-style: ridge;
+  border-radius: 15px;
+}
+.panel-body, .panel-footer {
+  background-color: #eed;
+}
+
+.panel-body img {
+  width: 50%;
+}
+
+.name, .desc {
+    font-size: 20px;
+}
+
+.add-creature, .back-to-index {
+  color: green;
+  display: inline-block;
+  float: right;
+  width: 8vw;
+  // margin-right: 50px;
+  margin-right: 10vw;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-family: cursive;
+}
+
+.header-index-img{
+  width: 100vw;
+}
+
+.header-edit-img{
+  width: 100vw;
+  margin: 0px auto;
+  background-color: #862d2d;
+}
+
+.header-new-img{
+  width: 100vw;
+  margin: 0px auto;
+  background-color: #fdc;
+}
+
+.header-show-img{
+  width: 100vw;
+  margin: 0px auto;
+  background-color: #fdc;
+}
+
+.header-index-img img {
+  width: 90%;
+  margin: 5%;
+  border-radius: 5px;
+
+}
+
+.header-edit-img img,  .header-new-img img, .header-show-img img{
+  width: 100%;
+  height: 60%;
+  padding: 0% 10%;
+  border-radius: 5px;
+}

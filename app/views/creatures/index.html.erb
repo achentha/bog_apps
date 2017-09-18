@@ -1,7 +1,36 @@
-<h1>Our Amazing Creatures</h1>
-<hr>
-<% @creatures.each do |creature| %>
-<p><strong>Name: </strong> <%= creature.name %></p>
-<p><strong>Description: </strong> <%= creature.description %></p>
-<hr>
-<% end %>
+<div class="header-index-img">
+  <h1>Our Amazing Creatures</h1>
+  <div class="add-creature">
+    <p><%= button_to "Add Creature", "/creatures/new", method: "get" %><p>
+  </div>
+  <%= image_tag "maxresdefault.jpg"%>
+
+</div>
+<div class="container">
+
+  <% @creatures.each do |creature| %>
+    <div class="panel panel-success">
+
+      <div class="panel-heading">
+        <p class="name"><strong>Name: </strong> <%= creature.name %></p>
+      </div>
+
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag creature.image%>
+          </div>
+          <div class="col-md=6">
+            <p class="desc"><strong>Description: </strong> <%= creature.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <%= link_to "more", creature_path(creature.id) %>
+      </div>
+
+    </div> <!-- class="panel panel-primary" -->
+  <% end %>
+
+</div> <!-- class="container" -->

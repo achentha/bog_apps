@@ -1,6 +1,15 @@
-<h1>Modifying An Awesome Creature</h1>
-<%= form_for :creature, url: "/creatures/#{@creature.id}", method: "patch" do |f| %>
-<strong>Name: </strong> <%= f.text_field :name %></br></br>
-<strong>Description: </strong> <%= f.text_area :description %></br></br>
-<%= f.submit "Save" %>
-<% end %>
+<div class="header-edit-img">
+  <h1>Modifying the Legendary Creature</h1>
+  <div class="back-to-index">
+    <p><%= button_to "Back to All Creatures", "/creatures", method: "get" %><p>
+  </div>
+  <%= image_tag @creature.image%>
+
+  <%= form_for :creature, url: "/creatures/#{@creature.id}", method: "patch" do |f| %>
+  <p style="margin-left: 5%; margin-top: 1%; color: blue"><strong>Name: </strong> <%= f.text_field :name %></p>
+  <p style="margin-left: 5%; margin-top: 1%; color: blue"><strong>Description: </strong> <%= f.text_area :description %></p>
+  <p style="margin-left: 5%; margin-top: 1%; color: blue"><strong>Image: </strong> <%= f.text_field :image %></p>
+  <p style="margin-left: 5%; color: green"><%= f.submit "Save" %></p>
+  <% end %>
+
+</div>

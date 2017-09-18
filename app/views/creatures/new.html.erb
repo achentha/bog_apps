@@ -1,6 +1,15 @@
-<h1>Adding an Amazing Creature</h1>
-<%= form_for :creature, url: "/creatures", method: "post" do |f| %>
-<strong>Name: </strong> <%= f.text_field :name %></br></br>
-<strong>Description: </strong> <%= f.text_area :description %></br></br>
-<%= f.submit "Save" %>
-<% end %>
+<div class="header-new-img">
+  <h1 style="color: #ff0">Adding an Amazing Creature</h1>
+  <div class="back-to-index">
+    <p><%= button_to "Back to All Creatures", "/creatures", method: "get" %><p>
+  </div>
+  <%= image_tag "dragon.jpg"%>
+
+  <%= form_for :creature, url: "/creatures", method: "post" do |f| %>
+  <p style="margin-left: 5%; margin-top: 1%; color: green"><strong>Name: </strong> <%= f.text_field :name %></p>
+  <p style="margin-left: 5%; margin-top: 1%; color: green"><strong>Description: </strong> <%= f.text_area :description %></pr>
+  <p style="margin-left: 5%; margin-top: 1%; color: green"><strong>Image: </strong> <%= f.text_field :image %></pr>
+  <p style="margin-left: 5%; color: blue"><%= f.submit "Save" %>
+  <% end %>
+
+</div>

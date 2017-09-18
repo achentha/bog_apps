@@ -1,4 +1,11 @@
-<h1>One Amazing Creature</h1>
-<p><strong>Name: </strong> <%= @creature.name %></p>
-<p><strong>Description: </strong> <%= @creature.description %></p>
-<%= button_to "Delete", @creature, method: :delete %>
+<div class="header-show-img">
+  <h1>One Amazing Creature</h1>
+  <div class="back-to-index">
+    <p><%= button_to "Back to All Creatures", "/creatures", method: "get" %><p>
+  </div>
+  <%= image_tag @creature.image%>
+  <p class="name" style="margin-left: 10%; margin-top: 1%; color: blue"><strong>Name: </strong> <%= @creature.name %></p>
+  <p class="desc" style="margin-left: 10%; margin-top: 1%; color: blue"><strong>Description: </strong> <%= @creature.description %></p>
+  <p style="margin-left: 10%; color: green"><%= button_to "Edit", "/creatures/#{@creature.id}/edit", method: :get %></p>
+  <p style="margin-left: 10%; color: green"><%= button_to "Delete", @creature, method: :delete %></p>
+</div>
